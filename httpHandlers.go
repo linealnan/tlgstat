@@ -9,14 +9,14 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintln(w, "<html><body>Hi, I'm a <strike>taxman</strike> statman and I'm fine!</body></html>")
+    fmt.Fprintln(w, "<html><body>Hi, I'm a tlgstat and I'm fine!</body></html>")
 }
 
 /*
     Test with this curl command:
     curl -H "Content-Type: application/json" -d '{"event_action":"event_action_test_value"}' http://localhost:8181/utm
 */
-func utmMarkupAdd(w http.ResponseWriter, r *http.Request) {
+func channelAdd(w http.ResponseWriter, r *http.Request) {
     var channel Channel
     body, err := ioutil.ReadAll(io.LimitReader(r.Body, 1048576))
     if err != nil {

@@ -19,9 +19,9 @@ var routes = Routes{
 		Index,
 	},
 	Route{
-		"utmMarkupAdd",
+		"channelAdd",
 		"POST",
 		"/utm",
-		utmMarkupAdd,
+		channelAdd,
 	},
 }
