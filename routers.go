@@ -21,7 +21,7 @@ var routes = Routes{
 	Route{
 		"channelAdd",
 		"POST",
-		"/utm",
+		"/channels",
 		channelAdd,
 	},
 }

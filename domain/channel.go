@@ -11,4 +11,6 @@ type Channels []Channel
 
 type ChannelModel interface {
     findAll() Channels
+    add(channel Channel)
+    addIfNotExist(channel Channel)
 }

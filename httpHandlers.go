@@ -15,7 +15,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 /*
     Test with this curl command:
-    curl -H "Content-Type: application/json" -d '{"event_action":"event_action_test_value"}' http://localhost:8181/utm
+    curl -H "Content-Type: application/json" -d '{"name":"name_value","link":"link_value", "сategory":"сategory_value","subscribers":"subscribers_value"}' http://localhost:8181/channels
 */
 func channelAdd(w http.ResponseWriter, r *http.Request) {
     var channel domain.Channel

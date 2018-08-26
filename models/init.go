@@ -2,20 +2,18 @@ package models
 
 import (
 	"database/sql"
-
-	"log"
+	_ "github.com/lib/pq"
 )
 
 var db *sql.DB
 
-func Init(dataSourceName string) {
-	var err error
-	db, err = sql.Open("postgres", dataSourceName)
+func Init(dataSourceName string) (*sql.DB, error) {
+	db, err := sql.Open("postgres", dataSourceName)
 	if err != nil {
-		log.Panic(err)
+		return nil, err
 	}
-
 	if err = db.Ping(); err != nil {
-		log.Panic(err)
+		return nil, err
 	}
+	return db, nil
 }

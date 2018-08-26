@@ -13,3 +13,7 @@ func (pchm *postgresChannelModel) findAll() domain.Channels {
 	channels[1] = channel
 	return channels
 }
+
+func (pchm *postgresChannelModel) add(channel domain.Channel) {
+	
+}
