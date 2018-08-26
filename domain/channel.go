@@ -1,4 +1,4 @@
-package tlgstat
+package domain
 
 type Channel struct {
     Name        string  `json:"name"`

@@ -6,6 +6,7 @@ import (
     "encoding/json"
     "io"
     "io/ioutil"
+    "github.com/shkatovdm/domain"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
@@ -17,7 +18,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
     curl -H "Content-Type: application/json" -d '{"event_action":"event_action_test_value"}' http://localhost:8181/utm
 */
 func channelAdd(w http.ResponseWriter, r *http.Request) {
-    var channel Channel
+    var channel domain.Channel
     body, err := ioutil.ReadAll(io.LimitReader(r.Body, 1048576))
     if err != nil {
         panic(err)
