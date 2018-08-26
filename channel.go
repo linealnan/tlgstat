@@ -1,4 +1,4 @@
-package domain
+package tlgstat
 
 type Channel struct {
     Name        string  `json:"name"`
@@ -9,6 +9,6 @@ type Channel struct {
 
 type Channels []Channel
 
-type channelModel interface {
+type ChannelModel interface {
     findAll() Channels
 }
