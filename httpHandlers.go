@@ -10,7 +10,7 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintln(w, "<html><body>Hi, I'm a tlgstat and I'm fine!</body></html>")
+    fmt.Fprintln(w, "<html><body>Hi, I'm a tlgstat and I'm good!</body></html>")
 }
 
 /*
